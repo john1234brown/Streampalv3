@@ -1,5 +1,4 @@
 {
-  "homepage": "https://john1234brown.github.io/streampalv3",
   "name": "streampal",
   "version": "0.3.0",
   "private": true,
@@ -18,8 +17,6 @@
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build" ,
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
