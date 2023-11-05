@@ -7,7 +7,12 @@ const Row = ({title, fetchURL, rowID}) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(()=> {
-    axios.get(fetchURL).then((response) => {
+    axios.get(fetchURL, {
+      headers: {
+          'authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYTljY2JkNDViNmY1MTJjN2E0YWZmMzA5MjIxZDgyOCIsInN1YiI6IjYzZDBhM2M3NjZhZTRkMDA5ZTlkZjY4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N5j1M7YnwmMTjIWMdYQbdh5suW2hCDucbqlDgMku_UA',
+          'content-type': 'application/json;charset=utf-8'
+      }
+  }).then((response) => {
       setMovies(response.data.results);
     })
   },[fetchURL]);
