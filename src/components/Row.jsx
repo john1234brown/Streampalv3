@@ -28,19 +28,15 @@ const Row = ({title, fetchURL, rowID}) => {
 
   return (
     <>
-      <h2 className='relative drop-shadow-md flex justify-left items-center text-white font-bold md:text-xl p-4 z-10'>{title}</h2>
+      <h2 className='relative drop-shadow-md flex justify-left items-center text-white font-bold md:text-xl p-4 z-10 duration-300'>{title}</h2>
       <div className='relative flex items-center group bg-gradient-to-br from-white/5'>
-        <div id={'slider' + rowID} className='relative w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+        <div id={'slider' + rowID} className='ml-12 mr-12 relative w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
           {movies.map((item, id) => (
             <Movie key={id} item={item}/>
           ))}
         </div>
-          <div onClick={slideLeft} className='w-10 h-[94.52%] mb-1 left-0 z-9 items-center bg-black opacity-25 absolute hover:opacity-75 cursor-pointer hidden group-hover:block'>
-            <HiChevronLeft className='absolute top-[43%] text-white opacity-25 group-hover:opacity-95 cursor-pointer  z-10 hidden group-hover:block' size={40}/>
-          </div>
-          <div onClick={slideRight} className='w-10 h-[94.52%] mb-1 right-0 z-9 items-center bg-black opacity-25 absolute hover:opacity-75 cursor-pointer hidden group-hover:block'>
-            <HiChevronRight className='absolute top-[43%] text-white opacity-25 group-hover:opacity-95 cursor-pointer  z-10 hidden group-hover:block' size={40}/>
-          </div>
+            <HiChevronLeft onClick={slideLeft} className='absolute top-[43%] left-0 text-white opacity-50 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>
+            <HiChevronRight onClick={slideRight} className='absolute top-[43%] right-0 text-white opacity-50 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>
       </div>
     </>
   )
