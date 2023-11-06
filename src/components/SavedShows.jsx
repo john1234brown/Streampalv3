@@ -37,22 +37,22 @@ const SavedShows = () => {
 
   return (
     <>
-    <h2 className='relative drop-shadow-md flex justify-left items-center text-white font-bold md:text-xl p-4 z-10'>My Shows</h2>
-      <div className='relative flex items-center group bg-gradient-to-br from-white/5'>
-        <div id={'slider'} className='ml-12 mr-12 relative w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+    <h2 className='flex relative z-10 items-center p-4 font-bold drop-shadow-md text-tanpal-500 justify-left md:text-xl'>My Shows</h2>
+      <div className='flex relative items-center group'>
+        <div id={'slider'} className='overflow-x-scroll relative mr-12 ml-12 w-full h-full whitespace-nowrap scroll-smooth scrollbar-hide'>
 
           {movies.map((item, id) => (
             <div key={id} className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 z-8'>
-                <img className='w-full h-full block' src={`https://image.tmdb.org/t/p/w500/${item.img}`} alt={item?.title} />
-            <div className='absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white duration-300'>
-                <p className='white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center duration-300'>{item?.title}</p>
-                <p onClick={()=> deleteShow(item.id)} className='absolute text-gray-300 text-2xl hover:text-red-600 duration-300 top-4 right-0'><HiTrash /></p>
+                <img className='block w-full h-full' src={`https://image.tmdb.org/t/p/w500/${item.img}`} alt={item?.title} />
+            <div className='absolute top-0 left-0 w-full h-full opacity-0 duration-300 text-tanpal-500 hover:bg-blapal-500/80 hover:opacity-100'>
+                <p className='flex justify-center items-center h-full text-xs font-bold text-center duration-300 white-space-normal md:text-sm'>{item?.title}</p>
+                <p onClick={()=> deleteShow(item.id)} className='absolute top-4 right-8 text-2xl duration-300 text-tanpal-600 hover:text-red-600'><HiTrash /></p>
             </div>
             </div>
           ))}
         </div>
-            <HiChevronLeft onClick={slideLeft} className='absolute top-[43%] left-0 text-white opacity-50 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>
-            <HiChevronRight onClick={slideRight} className='absolute top-[43%] right-0 text-white opacity-50 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>
+            <HiChevronLeft onClick={slideLeft} className='absolute top-[43%] left-0 text-tanpal-500 opacity-100 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>
+            <HiChevronRight onClick={slideRight} className='absolute top-[43%] right-0 text-tanpal-500 opacity-100 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>
       </div>
     </>
   )
