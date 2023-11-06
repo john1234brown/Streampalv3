@@ -2,9 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://use.typekit.net/fuo7jnm.css');
 
 body {
     background-color: #1E1D19;
-    font-family: 'Rubik', sans-serif;
+}
+
+body h1 {
+    font-family: "poster-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body h2 {
+    font-family: "poster-gothic-atf", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body h3 {
+    font-family: "poster-gothic-atf", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body h4 {
+    font-family: "poster-gothic-atf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body p {
+    font-family: "poster-gothic-atf", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
