@@ -26,7 +26,7 @@ const Signup = () => {
             <div className='fixed px-4 py-24 mt-[7rem] w-full z-5'>
                 <div className='rounded max-w-[450px] h-[600px] mx-auto bg-blapal-800/80 text-tanpal-500'>
                     <div className='max-w-[320px] mx-auto py-16'>
-                        <h1 className='text-3xl font-bold'>Log In</h1>
+                        <h1 className='text-3xl font-bold'>Sign Up</h1>
                         <form onSubmit={handleSubmit} className='flex flex-col items-center py-4 w-full'>
                             <input
                             onChange={(e) => setEmail(e.target.value)}
@@ -42,16 +42,16 @@ const Signup = () => {
                             placeholder='Password' 
                             autoComplete='current-password' 
                             />
-                            <button className='w-[50%] bg-purpal-500 py-1 my-6 rounded font-bold hover:bg-purpal-600'>Log In</button>
+                            <button className='w-[50%] bg-purpal-500 py-1 my-6 rounded font-bold hover:bg-purpal-600'>Sign Up</button>
                             <div className='flex justify-between items-center text-sm text-tanpal-600'>
-                                <p><input className='mr-2 w-4 h-4 rounded text-purpal-500 bg-blapal-500 hover:bg-gradient-to-b from-tanpal-500 border-tanpal-600 focus:ring-purpal-500' type="checkbox" />Remeber me</p>
+                                <p><input className='mr-2 w-4 h-4 rounded text-purpal-500 bg-blapal-500 hover:bg-gradient-to-b from-tanpal-500 border-tanpal-600 focus:ring-purpal-500' type="checkbox" />Remember me</p>
                                 <p className='ml-8'>Need Help?</p>
                             </div>
                             <span className='py-6 text-tanpal-600'>
-                                Not signed up to StreamPal?
+                                Already a member of StreamPal?
                             </span>
-                            <Link to='/signup'>
-                                <button className='py-1 my-1 px-[3rem] w-full rounded font-bold border-tanpal-500 border hover:border-opacity-0 hover:bg-tanpal-500/75 hover:text-blapal-500'>Sign Up</button>
+                            <Link to='/login'>
+                                <button className='py-1 my-1 px-[3rem] w-full rounded font-bold border-tanpal-500 border hover:border-opacity-0 hover:bg-tanpal-500/75 hover:text-blapal-500'>Log In</button>
                             </Link>
                         </form>
                     </div>

@@ -15,7 +15,6 @@ const Home = () => {
   useEffect(() => {
     if (!user) {
       navigate('/login')
-      window.location.reload();
     }
   }, [user, navigate]);
 
