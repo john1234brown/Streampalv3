@@ -8,6 +8,18 @@ body {
     background-color: #1E1D19;
 }
 
+html ::-webkit-scrollbar {
+    display: none;
+}
+
+html ::-webkit-scrollbar-track {
+    display: none;
+}
+
+html ::-webkit-scrollbar-thumb {
+    display: none;
+}
+
 body h1 {
     font-family: "poster-gothic-atf", sans-serif;
     font-weight: 700;

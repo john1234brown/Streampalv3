@@ -32,13 +32,13 @@ const Main = () => {
         <div className='w-full h-full'>
         <div className='absolute w-full h-[550px] bg-gradient-to-t from-blapal-500'></div>
         <img className='object-cover w-full h-full' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
-            <div className='absolute w-full top-[20%] p-4 md:p-8'>
+            <div className='mt-[-1.75rem] absolute w-full top-[20%] p-4 md:p-8'>
                 <h1 className='text-3xl font-bold md:text-5xl'>{movie?.title}</h1>
                 <div className='my-4'>
                     <Link to='/watch'>
                         <button className='px-6 py-1 rounded text-tanpal-500 bg-purpal-500 hover:bg-purpal-600 hover:text-blapal-800'>Play</button>
                     </Link>
-                    <button className='px-5 py-1 ml-4 rounded border border-tanpal-500 text-tanpal-500 hover:bg-tanpal-500/75 hover:border-none hover:text-blapal-800'>Watch Later</button>
+                    <button className='px-6 py-1 ml-4 rounded bg-blapal-500 text-tanpal-500 hover:bg-tanpal-500/75 hover:text-blapal-800'>Watch Later</button>
                 </div>
                 <p className='text-sm text-tanpal-600'>Released: {movie?.release_date}</p>
                 <p className='mt-1 text-sm text-tanpal-600'>Rating: {movie?.vote_average}</p>

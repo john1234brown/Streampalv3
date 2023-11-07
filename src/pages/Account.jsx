@@ -12,7 +12,7 @@ const Account = () => {
         </img>
         <div className='fixed top-0 left-0 w-full h-[400px] bg-gradient-to-t from-blapal-500'></div>
         <div className='absolute top-[20%] p04 md:p-8'>
-          <h1 className='text-3xl font-bold md:text-5xl ml-[-1.1rem] mt-[-6rem]'>Settings</h1>
+          <h1 className='text-[1rem] font-bold md:text-5xl ml-[-1.1rem] mt-[-3.5rem]'>Settings</h1>
         </div>
         <div className='mt-[-8rem]'>
           <SavedShows />

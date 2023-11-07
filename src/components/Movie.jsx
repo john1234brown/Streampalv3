@@ -36,14 +36,14 @@ const Movie = ({item}) => {
   return (
     <>
         <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 z-8'>
-            <img className='w-full h-full block' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item?.title} />
-        <div className='absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white'>
-            <p className='whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center'>{item?.title}</p>
+            <img className='block w-full h-full' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item?.title} />
+        <div className='absolute top-0 left-0 w-full h-full opacity-0 text-tanpal-500 hover:bg-blapal-500/80 hover:opacity-100'>
+            <p className='flex justify-center items-center h-full text-xs font-bold text-center whitespace-normal md:text-sm'>{item?.title}</p>
             <p onClick={saveShow}>
               {like ? (
-                <FaHeart className='absolute top-4 left-4 text-gray-300' />
+                <FaHeart className='absolute top-4 left-4 text-purpal-500 hover:text-red-500' />
               ) : (
-                <FaRegHeart className='absolute top-4 left-4 text-gray-300' />
+                <FaRegHeart className='absolute top-4 left-4 text-tanpal-500 hover:text-purpal-500' />
               )}
             </p>
         </div>

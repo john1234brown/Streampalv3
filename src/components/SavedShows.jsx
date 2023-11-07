@@ -46,7 +46,7 @@ const SavedShows = () => {
                 <img className='block w-full h-full' src={`https://image.tmdb.org/t/p/w500/${item.img}`} alt={item?.title} />
             <div className='absolute top-0 left-0 w-full h-full opacity-0 duration-300 text-tanpal-500 hover:bg-blapal-500/80 hover:opacity-100'>
                 <p className='flex justify-center items-center h-full text-xs font-bold text-center duration-300 white-space-normal md:text-sm'>{item?.title}</p>
-                <p onClick={()=> deleteShow(item.id)} className='absolute top-4 right-8 text-2xl duration-300 text-tanpal-600 hover:text-red-600'><HiTrash /></p>
+                <p onClick={()=> deleteShow(item.id)} className='absolute top-4 left-4 text-[1.25rem] duration-300 text-tanpal-600 hover:text-red-600'><HiTrash /></p>
             </div>
             </div>
           ))}
