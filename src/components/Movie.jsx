@@ -49,7 +49,6 @@ const Movie = ({item}) => {
         <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 z-8'>
             <img className='block w-full h-full' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item?.title} />
         <div id='movieItem' className='absolute top-0 left-0 w-full h-full opacity-0 text-tanpal-500 hover:bg-blapal-500/80 hover:opacity-100' onClick={getMovieID}>
-        <Link to={`/watch/${item.id}`}>
             <p className='flex justify-center items-center h-full text-xs font-bold text-center whitespace-normal md:text-sm'>{item?.title}</p>
             <p onClick={saveShow}>
               {like ? (
@@ -58,7 +57,6 @@ const Movie = ({item}) => {
                 <FaRegHeart className='absolute top-4 left-4 text-tanpal-500 hover:text-purpal-500' />
               )}
             </p>
-          </Link>
         </div>
         </div>
         <LogModal isOpen={modalOpen} toggleModal={toggleModal} />
