@@ -6,16 +6,11 @@ import {HiChevronRight, HiChevronLeft} from 'react-icons/hi';
 const Row = ({title, fetchURL, rowID}) => {
   const [movies, setMovies] = useState([]);
 
-  useEffect(()=> {
-    axios.get(fetchURL, {
-      headers: {
-          'authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYTljY2JkNDViNmY1MTJjN2E0YWZmMzA5MjIxZDgyOCIsInN1YiI6IjYzZDBhM2M3NjZhZTRkMDA5ZTlkZjY4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N5j1M7YnwmMTjIWMdYQbdh5suW2hCDucbqlDgMku_UA',
-          'content-type': 'application/json;charset=utf-8'
-      }
-  }).then((response) => {
-      setMovies(response.data.results);
-    })
-  },[fetchURL]);
+useEffect(() => {
+  axios.get(fetchURL).then((response) => {
+    setMovies(response.data.results);
+  })
+},[fetchURL]);
 
   const slideLeft = () => {
     var slider = document.getElementById('slider' + rowID);
@@ -32,7 +27,7 @@ const Row = ({title, fetchURL, rowID}) => {
       <div className='flex relative items-center group'>
         <div id={'slider' + rowID} className='overflow-x-scroll relative mr-12 ml-12 w-full h-full whitespace-nowrap scroll-smooth scrollbar-hide'>
           {movies.map((item, id) => (
-            <Movie key={id} item={item}/>
+            <Movie key={id} item={item} />
           ))}
         </div>
             <HiChevronLeft onClick={slideLeft} className='absolute top-[43%] left-0 text-tanpal-600 opacity-100 hidden hover:opacity-75 group-hover:block cursor-pointer z-10 duration-300' size={40}/>

@@ -2,18 +2,15 @@ import React, { useEffect, useState } from 'react'
 import requests from '../Requests'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import Movie from './Movie';
+
 const Main = () => {
     const [movies, setMovies] = useState([]);
 
     const movie = movies[Math.floor(Math.random() * movies.length)];
 
     useEffect(()=> {
-        axios.get(requests.requestPopular, {
-            headers: {
-                'authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYTljY2JkNDViNmY1MTJjN2E0YWZmMzA5MjIxZDgyOCIsInN1YiI6IjYzZDBhM2M3NjZhZTRkMDA5ZTlkZjY4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N5j1M7YnwmMTjIWMdYQbdh5suW2hCDucbqlDgMku_UA',
-                'content-type': 'application/json;charset=utf-8'
-            }
-        }).then((response)=>{
+        axios.get(requests.requestPopular).then((response) => {
             setMovies(response.data.results);
         })
     },[]);
