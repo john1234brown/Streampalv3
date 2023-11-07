@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { UserAuth } from '../context/AuthContext'
 import { db } from '../firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 import LogModal from './LogModal';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 const Movie = ({item}) => {
 
@@ -41,7 +40,7 @@ const Movie = ({item}) => {
       //navigate(`/watch`)
       const storedMovieIDs = JSON.parse(localStorage.getItem('movieIDs')) || [];
       const updatedMovieIDs = [...storedMovieIDs, item.id];
-      localStorage.setItem('movieIDs', JSON.stringify(updatedMovieIDs));
+     localStorage.setItem('movieIDs', JSON.stringify(updatedMovieIDs));
     }
 
   return (

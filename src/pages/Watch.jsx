@@ -1,9 +1,9 @@
 import {UserAuth} from '../context/AuthContext'
 import React, { useState, useEffect } from 'react'
 import { BsFullscreen, BsFullscreenExit, BsFillPlayFill, BsPauseFill, BsVolumeUpFill, BsVolumeMuteFill } from 'react-icons/bs';
-import Movie from '../components/Movie';
+import { movieID } from '../components/Movie';
 
-const Watch = ({}) => {
+const Watch = () => {
     const [movies, setMovies] = useState([]);
     const [fullscreen, fullscreenExit] = useState(false);
     const [play, pauseVideo] = useState(false);
@@ -11,9 +11,7 @@ const Watch = ({}) => {
   return (
     <>
         <div className='w-screen h-screen'>
-        {movies.map((item, id) => (
-              <iframe key={id} src={`https://vidsrc.me/embed/movie?tmdb=${item.id}`} frameborder="0"></iframe>
-            ))}
+              <iframe src="https://vidsrc.me/embed/movie?tmdb=" frameborder="0"></iframe>
             <div className='bg-black/0'>
             {fullscreen ? <BsFullscreenExit className='absolute right-4 bottom-4 text-2xl text-gray-300' /> : <BsFullscreen className='absolute right-4 bottom-4 text-2xl text-gray-300' />}
             {fullscreen ? <BsPauseFill className='absolute bottom-4 left-4 text-3xl text-gray-300' /> : <BsFillPlayFill className='absolute bottom-4 left-4 text-3xl text-gray-300' />}
