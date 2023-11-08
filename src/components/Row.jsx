@@ -1,25 +1,45 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Movie from './Movie';
 import {HiChevronRight, HiChevronLeft} from 'react-icons/hi';
 
-const Row = ({title, fetchURL, rowID}) => {
+const Row = ({title, fetchURLs, rowID}) => {
   const [movies, setMovies] = useState([]);
+  const [scrollPos, setScrollPos] = useState(0);
 
-useEffect(() => {
-  axios.get(fetchURL).then((response) => {
-    setMovies(response.data.results);
-  })
-},[fetchURL]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const responses = await Promise.all(fetchURLs.map(url => axios.get(url)));
+        const allMovies = responses.flatMap(response => response.data.results);
+        setMovies(allMovies);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
+    fetchData();
+  }, [fetchURLs]);
+  
   const slideLeft = () => {
-    var slider = document.getElementById('slider' + rowID);
-    slider.scrollLeft = slider.scrollLeft - 500;
-  }
+    const slider = document.getElementById('slider' + rowID);
+    const newPosition = scrollPos - 1000 < 0 ? slider.scrollWidth - slider.offsetWidth : scrollPos - 1000;
+    setScrollPos(newPosition);
+    slider.scrollTo({
+      left: newPosition,
+      behavior: 'smooth'
+    });
+  };
+
   const slideRight = () => {
-    var slider = document.getElementById('slider' + rowID);
-    slider.scrollLeft = slider.scrollLeft + 500;
-  }
+    const slider = document.getElementById('slider' + rowID);
+    const newPosition = scrollPos + 1000 > slider.scrollWidth - slider.offsetWidth ? 0 : scrollPos + 1000;
+    setScrollPos(newPosition);
+    slider.scrollTo({
+      left: newPosition,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <>

@@ -9,6 +9,7 @@ import Watch from "./pages/Watch";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
+
   return (
     <>
     <AuthContextProvider>

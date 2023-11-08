@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
-import { FaSignOutAlt, FaUser, FaSearch, FaHome, FaQuestionCircle } from 'react-icons/fa'
+import { FaSignOutAlt, FaUser, FaSearch, FaHome, FaQuestionCircle, FaTv } from 'react-icons/fa'
 
 const Navbar = () => {
   const {user, logOut} = UserAuth()
@@ -27,11 +27,14 @@ const Navbar = () => {
       </Link>
       {user?.email ? 
         <div className='inline-flex absolute right-0 z-20 m-2'>
-            <Link to='/'>
+          <Link to='/'>
             <FaHome className='pb-[0.2rem] text-[1.7rem] mr-4 duration-500 cursor-pointer z-21 text-blapal-500 hover:text-tanpal-500' />
-            </Link>
+          </Link>
             <FaQuestionCircle className='text-[1.5rem] mr-4 duration-500 cursor-pointer z-21 text-blapal-500 hover:text-tanpal-500' />
             <FaSearch className='text-[1.4rem] mr-4 duration-500 cursor-pointer z-21 text-blapal-500 hover:text-tanpal-500' />
+          <Link to='/watch'>
+            <FaTv className='text-[1.5rem] mr-4 duration-500 cursor-pointer z-21 text-blapal-500 hover:text-tanpal-500' />
+          </Link>
           <Link to='/account' className='group'>
             <FaUser className='text-[1.3rem] mr-4 duration-500 cursor-pointer z-21 text-blapal-500 hover:text-tanpal-500' />
             <div className='absolute top-0 right-0 mt-14 z-50 w-[8rem] h-[2.5rem] items-center justify-center hidden group-hover:block cursor-pointer bg-tanpal-500 border rounded border-blapal-500/50'>

@@ -20,7 +20,7 @@ const Watch = () => {
     <>
         <div className='w-screen h-screen'>
           {movieIdents && (
-            <iframe
+              <iframe
               src={`https://vidsrc.me/embed/movie?tmdb=${movieIdents}`}
               allowFullScreen
               className='w-full h-full'

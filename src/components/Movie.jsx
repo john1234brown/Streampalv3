@@ -33,6 +33,7 @@ const Movie = ({item}) => {
       } else {
           toggleModal(setModalOpen(!modalOpen))
       }
+      window.location.reload();
     }
 
       const handleClick = async() => {

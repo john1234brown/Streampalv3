@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import requests from '../Requests'
+import { key, popular } from '../Requests'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Movie from './Movie';
@@ -9,8 +9,14 @@ const Main = () => {
 
     const movie = movies[Math.floor(Math.random() * movies.length)];
 
+    const popularPages = popular;
+
+    const popularURLs = popularPages.reduce((accumulator, currentURL) => {
+        return accumulator.concat(currentURL);
+      }, []);
+
     useEffect(()=> {
-        axios.get(requests.requestPopular).then((response) => {
+        axios.get(popularURLs).then((response) => {
             setMovies(response.data.results);
         })
     },[]);
