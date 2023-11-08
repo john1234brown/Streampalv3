@@ -6,6 +6,7 @@
 
 body {
     background-color: #1E1D19;
+    overflow: auto;
 }
 
 html ::-webkit-scrollbar {
