@@ -43,7 +43,7 @@ const Row = ({title, fetchURLs, rowID}) => {
 
   return (
     <>
-      <h2 className='flex relative z-10 items-center p-4 font-bold drop-shadow-md duration-300 text-tanpal-400 justify-left md:text-xl'>{title}</h2>
+      <h2 className='flex relative items-center p-4 font-bold drop-shadow-md duration-300 z-5 text-tanpal-400 justify-left md:text-xl'>{title}</h2>
       <div className='flex relative items-center group'>
         <div id={'slider' + rowID} className='overflow-x-scroll relative mr-12 ml-12 w-full h-full whitespace-nowrap scroll-smooth scrollbar-hide'>
           {movies.map((item, id) => (

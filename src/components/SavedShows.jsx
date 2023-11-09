@@ -70,7 +70,7 @@ const SavedShows = ({ item }) => {
       <div className='flex relative items-center group'>
         <div id={'slider'} className='overflow-x-scroll relative mr-12 ml-12 w-full h-full whitespace-nowrap scroll-smooth scrollbar-hide'>
           {[...Array(10)].map((_, id) => (
-            <div key={id} className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 z-8'>
+            <div key={id} className='w-[7rem] sm:w-[9rem] md:w-[11rem] lg:w-[13rem] inline-block cursor-pointer relative p-2 z-8'>
               {id < movies.length ? (
                 <img className='block w-full h-full' src={`https://image.tmdb.org/t/p/w500/${movies[id].img}`} alt={movies[id]?.title} />
               ) : (

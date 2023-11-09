@@ -35,7 +35,7 @@ const Main = () => {
         <div className='w-full h-full'>
         <div className='absolute w-full h-[550px] bg-gradient-to-t from-blapal-500'></div>
         <img className='object-cover w-full h-full' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
-            <div className='mt-[-1.75rem] absolute w-full top-[20%] p-4 md:p-8'>
+            <div className='absolute w-full top-[20%] p-4 md:p-8'>
                 <h1 className='text-3xl font-bold md:text-5xl'>{movie?.title}</h1>
                 <div className='my-4'>
                     <Link to='/watch'>

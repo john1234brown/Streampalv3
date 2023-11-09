@@ -67,10 +67,10 @@ const Home = () => {
 
   return (
     <>
-        <div className='z-0'>
+        <div className='z-0 mt-[4rem]'>
           <Main />
         </div>
-        <div className='z-12 mt-[-2rem] w-full'>
+        <div className='z-5 mt-[-2rem] w-full'>
           <ProtectedRoute><SavedShows updateKey={updateKey}/></ProtectedRoute>
           <Row rowID={1} title="Popular" fetchURLs={popularURLs} />
           <Row rowID={2} title='Animation' fetchURLs={animationURLs} />

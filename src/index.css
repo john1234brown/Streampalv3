@@ -4,48 +4,54 @@
 
 @import url('https://use.typekit.net/fuo7jnm.css');
 
+@layer {
+    .topbarIcon {
+        @apply flex relative justify-center items-center mt-2 mr-1 mb-2 w-12 h-12 rounded-3xl transition-all duration-500 ease-linear cursor-pointer text-blapal-500 hover:text-tanpal-500 hover:bg-blapal-500 hover:rounded-xl;
+    }
+    .topbarTooltip {
+        @apply absolute top-14 p-2 m-2 h-auto text-xs font-bold rounded-md shadow-md opacity-0 transition-all duration-500 origin-top scale-0 min-h-max text-tanpal-500 bg-blapal-500;
+    }
+    .subIcon {
+        @apply flex relative justify-center items-center mx-auto mt-2 mb-2 w-6 h-6 transition-all duration-500 ease-linear cursor-pointer text-tanpal-500 hover:text-purpal-500;
+    }
+}
+
 body {
     background-color: #1E1D19;
     overflow: auto;
 }
 
-html ::-webkit-scrollbar {
-    display: none;
-}
-
-html ::-webkit-scrollbar-track {
-    display: none;
-}
-
+html ::-webkit-scrollbar,
+html ::-webkit-scrollbar-track,
 html ::-webkit-scrollbar-thumb {
     display: none;
 }
 
-body h1 {
+h1 {
     font-family: "poster-gothic-atf", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
-body h2 {
+h2 {
     font-family: "poster-gothic-atf", sans-serif;
     font-weight: 600;
     font-style: normal;
 }
 
-body h3 {
+h3 {
     font-family: "poster-gothic-atf", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
-body h4 {
+h4 {
     font-family: "poster-gothic-atf", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-body p {
+p {
     font-family: "poster-gothic-atf", sans-serif;
     font-weight: 300;
     font-style: normal;
