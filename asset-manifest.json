@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Streampalv3/static/css/main.7bc40632.css",
-    "main.js": "/Streampalv3/static/js/main.41148f20.js",
+    "main.css": "/Streampalv3/static/css/main.075d3a0c.css",
+    "main.js": "/Streampalv3/static/js/main.403eee8a.js",
     "static/media/placeholder.jpg": "/Streampalv3/static/media/placeholder.183a515b14175ab48af5.jpg",
     "index.html": "/Streampalv3/index.html",
-    "main.7bc40632.css.map": "/Streampalv3/static/css/main.7bc40632.css.map",
-    "main.41148f20.js.map": "/Streampalv3/static/js/main.41148f20.js.map"
+    "main.075d3a0c.css.map": "/Streampalv3/static/css/main.075d3a0c.css.map",
+    "main.403eee8a.js.map": "/Streampalv3/static/js/main.403eee8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bc40632.css",
-    "static/js/main.41148f20.js"
+    "static/css/main.075d3a0c.css",
+    "static/js/main.403eee8a.js"
   ]
 }
